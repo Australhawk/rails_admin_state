@@ -25,7 +25,7 @@ module RailsAdmin
               event_class = @state_machine_options.event(event)
               ret << bindings[:view].link_to(
                 events[event].human_name,
-                state_path(model_name: @abstract_model, id: bindings[:object].id, event: event, attr: name),
+                state_paths(model_name: @abstract_model, id: bindings[:object].id, event: event, attr: name),
                 method: :post, 
                 class: "btn btn-mini #{event_class}",
                 style: 'margin-bottom: 5px;'
